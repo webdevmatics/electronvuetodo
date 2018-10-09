@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:electron": "vue-cli-service build:electron",
+    "serve:electron": "vue-cli-service serve:electron",
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -14,6 +17,9 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
+    "electron": "^2.0.2",
+    "vue-cli-plugin-electron-builder": "^1.0.0-rc.3",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "main": "dist_electron/bundled/background.js"
 }
